@@ -28,7 +28,7 @@ These experiences are saved to the replay buffer which holds up to `BUFFER_SIZE`
 At each `UPDATE_EVERY` steps, the agent samples `BATCH_SIZE` random experiences and performs a gradient descent optimization
 with learning rate `LR` (using Adam optimizer) based on a custom loss function value, which is calculated for a given batch of experiences as:
 
-![Loss function equation](.\img\loss.png)
+![Loss function equation](img/loss.png)
 
 where `s` is current state, `a` is current action, `r` is reward, `s'` is next state, `γ` is a target discount factor, 
 `θ` are trainable parameters of a local network and `θ'` are parameters of a target network.
@@ -53,7 +53,7 @@ Both the local and the target network have identical architectures, which consis
 with ReLU activations followed by one feed forward layer (dense) with ReLU activation and finalized by output Feed Forward layer.
 The sequence along with the parameters used for each layer is illustrated at the following image:
 
-![Network architectures](.\img\architecture.png)
+![Network architectures](img/architecture.png)
 
 where `nf` is number of convolution filters (kernels), `fs` is filter (kernel) size, `st` is stride
 and `nu` is number of hidden units for feed forward layers. 
@@ -63,7 +63,7 @@ To solve the environment, the agent must be able achieve average episode score o
 Our agent with hyperparameters and network architecture stated in previous chapters was able to solve the environment
 in `867` episodes with the average score of `13.05`. The scores for individual episodes are depicted on the following image:
 
-![Final agent scores](.\img\scores.png)
+![Final agent scores](img/scores.png)
 
 ## Future improvements
 Our agent gives concrete results but is far from achieving state of the art performance.
